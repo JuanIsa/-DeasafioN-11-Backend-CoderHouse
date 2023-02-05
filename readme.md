@@ -1,7 +1,7 @@
 
 # Proyecto creado con Node JS
-## `Segunda entrega del desafío final` 
-### Servidor API REST con cambio de sistema de almacenamiento local/cloud (filesystem/Mongo Atlas).
+## `Entrega Nº 11` 
+### Mock y normalización de datos.
 
 ## Scritps disponibles:
 En la carpeta de los proyecto hay varios comandos que podés correr. 
@@ -24,10 +24,13 @@ Si no se puede aprovechar la dependencia de desarrollo NodemonJS y ejecutar:
 Este comando va a hacer que la salida de la app se actualice en tiempo real.
 La consola se va a ir recargando a medida de que hagas cambios en el código.
 
-### Si se desea cambiar el sistema de almacenamiento entre las diferentes bases de datos, cambiar la variable "key" entre los valores 1 o 2 (type: Number), esta variable se encuentra en el archivo ./src/dao/index.js 
-`El cambio de sistema de bases de datos solo está disponible para el handler productos, no así para el carrito de compras.`
+## `En este proyecto vas a poder encontrar dos endpoints particulares: `
 
-* Para oficiar de administrador es necesario enviar en el `header` de cada una de las peticiones la clave `administrador`, con su respectivo value booleano `true` o `false`, ejemplo:
+* `/api/productos-test`. Este mismo retornará al front 5 productos generados de manera aleatoria con la librería Facker.js 
+
+* `/api/messages`. Este mismo retornará al front la lista completa de mensajes normalizados desde la base de datos Mongo Atlas, además de informar al backend el rendimiento de la normalización. 
+
+### Para oficiar de administrador es necesario enviar en el `header` de cada una de las peticiones la clave `administrador`, con su respectivo value booleano `true` o `false`, ejemplo:
 
 * ```
   administrador: false
